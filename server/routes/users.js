@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-var nodemailer = require('nodemailer');
+var nodemailer = require("nodemailer");
 
 // bcript
 const bcrypt = require("bcrypt");
@@ -22,8 +22,8 @@ router.post("/register", (req, res) => {
             res.status(400).send("Bad request. User Already Registered");
         } else {
             //code if no user with entered email was found
-            bcrypt.genSalt(10, function (err, salt) {
-                bcrypt.hash(req.body.password, salt, function (err, hash) {
+            bcrypt.genSalt(10, function(err, salt) {
+                bcrypt.hash(req.body.password, salt, function(err, hash) {
                     if (err) {
                         return console.log("Error Hash");
                     } else {
@@ -34,33 +34,43 @@ router.post("/register", (req, res) => {
                         newUser
                             .save()
                             .then(data => {
-                                res.json(data)
+                                res.json(data);
                                 var transporter = nodemailer.createTransport({
-                                    service: 'gmail',
+                                    service: "gmail",
                                     auth: {
-                                        user: 'madilzulf@gmail.com',
-                                        pass: 'Mutation62'
+                                        user: "madilzulf@gmail.com",
+                                        pass: "Mutation62"
                                     }
                                 });
 
                                 var mailOptions = {
-                                    from: 'madilzulf@gmail.com',
+                                    from: "madilzulf@gmail.com",
                                     to: data.email,
-                                    subject: 'Hello There Please activate your acount',
-                                    text: `Hi, Thanks for your Registration. Please varify you email by clicking this link http://localhost:3000/verification/${data._id}`
-                                    // html: '<h1>Hi Smartherd</h1><p>Your Messsage</p>'        
+                                    subject:
+                                        "Hello There Please activate your acount",
+                                    text: `Hi, Thanks for your Registration. Please varify you email by clicking this link https://careersols.herokuapp.com/${
+                                        data._id
+                                    }`
+                                    // html: '<h1>Hi Smartherd</h1><p>Your Messsage</p>'
                                 };
 
-                                transporter.sendMail(mailOptions, function (error, info) {
+                                transporter.sendMail(mailOptions, function(
+                                    error,
+                                    info
+                                ) {
                                     if (error) {
-                                        console.log("error in send email", error);
+                                        console.log(
+                                            "error in send email",
+                                            error
+                                        );
                                     } else {
-                                        console.log('Email sent: ' + info.response);
+                                        console.log(
+                                            "Email sent: " + info.response
+                                        );
                                     }
                                 });
                             })
                             .catch(e => console.log("error after save"));
-
                     }
                 });
             });
@@ -68,25 +78,25 @@ router.post("/register", (req, res) => {
     });
 });
 
-
 // update object for Email Verification
 router.post("/EmailVerification", (req, res) => {
-    Users.findByIdAndUpdate(req.body._id, {
-        confirmed: true
-    }, (err, res) => {
-        if (err) {
-            console.log("Error in id", err);
-            // res.json(err);
-            // res.status(400).send("Bad request. User Already Registered");
-
-        } else {
-            console.log("Object Updated", res);
-            // res.status(200).send("User Updated");
-            // res.json(res);
+    Users.findByIdAndUpdate(
+        req.body._id,
+        {
+            confirmed: true
+        },
+        (err, res) => {
+            if (err) {
+                console.log("Error in id", err);
+                // res.json(err);
+                // res.status(400).send("Bad request. User Already Registered");
+            } else {
+                console.log("Object Updated", res);
+                // res.status(200).send("User Updated");
+                // res.json(res);
+            }
         }
-    })
-})
-
-
+    );
+});
 
 module.exports = router;
