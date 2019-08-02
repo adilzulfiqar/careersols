@@ -22,8 +22,8 @@ router.post("/register", (req, res) => {
             res.status(400).send("Bad request. User Already Registered");
         } else {
             //code if no user with entered email was found
-            bcrypt.genSalt(10, function(err, salt) {
-                bcrypt.hash(req.body.password, salt, function(err, hash) {
+            bcrypt.genSalt(10, function (err, salt) {
+                bcrypt.hash(req.body.password, salt, function (err, hash) {
                     if (err) {
                         return console.log("Error Hash");
                     } else {
@@ -46,15 +46,12 @@ router.post("/register", (req, res) => {
                                 var mailOptions = {
                                     from: "madilzulf@gmail.com",
                                     to: data.email,
-                                    subject:
-                                        "Hello There Please activate your acount",
-                                    text: `Hi, Thanks for your Registration. Please varify you email by clicking this link https://careersols.herokuapp.com/${
-                                        data._id
-                                    }`
+                                    subject: "Hello There Please activate your acount",
+                                    text: `Hi, Thanks for your Registration. Please varify you email by clicking this link https://careersols.herokuapp.com/${data._id}`
                                     // html: '<h1>Hi Smartherd</h1><p>Your Messsage</p>'
                                 };
 
-                                transporter.sendMail(mailOptions, function(
+                                transporter.sendMail(mailOptions, function (
                                     error,
                                     info
                                 ) {
@@ -81,8 +78,7 @@ router.post("/register", (req, res) => {
 // update object for Email Verification
 router.post("/EmailVerification", (req, res) => {
     Users.findByIdAndUpdate(
-        req.body._id,
-        {
+        req.body._id, {
             confirmed: true
         },
         (err, res) => {
