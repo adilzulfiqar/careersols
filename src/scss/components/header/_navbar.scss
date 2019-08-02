@@ -1,0 +1,42 @@
+nav {
+    // background: white;
+    padding: 20px 0 !important;
+    z-index: 1000;
+
+    a.navbar-brand {
+        color: white !important;
+    }
+
+    ul.navbar-nav {
+        li {
+            &.active {
+
+                a,
+                button {
+                    color: lightgrey !important;
+                }
+            }
+
+            &:hover {
+
+                a,
+                button {
+
+                    color: lightgrey !important;
+                }
+            }
+
+            a,
+            button {
+                color: white !important;
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+
+                &.btn-primary {
+                    color: white !important;
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@import './variables';
+@import './components/fonts/font-faces';
+@import './components/forms/login';
+@import './components/forms/forgot';
+@import './components/header/header';
+@import './components/services';
+@import './components/InternshipCandidate/internship';
+@import './components/InternshipCandidate/candidates';
+@import './components/subsciption';
+@import './components/footer';
+@import './components/blog/blog.scss';
+
+body {
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+}

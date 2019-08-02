@@ -1,0 +1,37 @@
+section.candidate {
+    padding: 100px 0;
+    background: $section-bg-color;
+
+    p {
+        color: $h-p-color;
+    }
+
+    .candidate-list {
+        margin-top: 100px;
+
+        .candidate {
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 10px 0;
+
+            &[class^="col"] {
+                padding: 0 !important;
+                margin: 0;
+
+            }
+
+            .thumbnail {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                padding-bottom: 0 !important;
+            }
+
+            .detail {}
+
+            .location {}
+
+            .intern-btn {}
+        }
+    }
+}

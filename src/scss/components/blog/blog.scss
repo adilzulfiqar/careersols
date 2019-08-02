@@ -1,0 +1,64 @@
+$breadcrumb-font-size: 50px;
+
+header.blog {
+    nav.crumbs {
+        margin-top: 400px;
+
+        ol.breadcrumb {
+
+            background: none !important;
+
+            li {
+                color: white;
+                font-size: $breadcrumb-font-size;
+                font-weight: lighter;
+
+                &.active::before {
+                    color: white;
+                }
+
+                &:hover {
+                    a {
+
+                        color: lightgrey !important;
+                    }
+                }
+
+                a {
+                    color: white;
+                    font-size: $breadcrumb-font-size;
+                    font-weight: 700;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+section.top-blogs {
+    padding-top: 50px;
+
+    h1.heading {
+        margin: 20px 0;
+    }
+}
+
+aside.latest-blogs {
+    padding-top: 50px;
+
+    h3.heading {
+        margin: 20px 0;
+    }
+
+    .mini-blog {
+        border-bottom: 1px solid lightgray;
+        margin-bottom: 20px;
+
+        .thumbnail {
+            padding-right: 0px !important;
+        }
+
+
+    }
+
+}

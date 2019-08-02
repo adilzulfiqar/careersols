@@ -1,0 +1,21 @@
+section.subscription {
+    padding: 100px 0;
+    background-color: $primary-color;
+    color: white;
+
+    form.subscribe-form {
+        margin-top: 50px;
+
+        input {
+            height: 50px;
+            border-radius: 2px 0 0 2px;
+            border: none;
+
+            &[type="submit"] {
+                width: 200px;
+                border-radius: 0px 2px 2px 0px;
+
+            }
+        }
+    }
+}

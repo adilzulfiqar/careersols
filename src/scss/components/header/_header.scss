@@ -1,0 +1,106 @@
+@import './navbar';
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url('../images/header/bg.jpg');
+    background-position: right top;
+    background-size: cover;
+
+    .content {
+        height: 100%;
+        margin-top: -50px;
+
+        .content-value {
+            display: flex;
+            align-items: center;
+            height: 600px;
+            width: 100%;
+
+            p {
+                color: lightgray;
+            }
+
+            h1 {
+                color: white;
+                font-size: 70px !important;
+
+
+                span:nth-of-type(1) {
+                    font-weight: 700;
+
+                }
+
+                span:nth-of-type(2) {
+                    font-weight: 400;
+                }
+            }
+
+            .tabs {
+
+                nav {
+                    font-size: 20px;
+                    padding-bottom: 0 !important;
+
+                    .tab-content {
+                        border: none !important;
+
+                    }
+
+                    .nav-tabs {
+                        border: none !important;
+
+                        a.nav-item {
+                            background: #007BFF;
+                            border: none !important;
+
+                            color: white;
+                            margin-left: 5px;
+                            padding: 15px 15px !important;
+
+                            &:first-of-type {
+                                margin-left: 0px;
+
+                            }
+
+                            &.active {
+                                background: white;
+                                color: rgba(0, 0, 0, 0.7);
+                            }
+                        }
+                    }
+                }
+
+                .tab-content {
+                    background: white;
+                    margin-top: 1px;
+                    padding: 1rem 1rem 0 1rem;
+                    border-radius: 0 5px 5px 5px;
+
+                    form {
+                        .form-group {
+                            .form-field {
+                                .icon {
+                                    i {
+                                        position: absolute;
+                                        top: 17px;
+                                        left: 25px;
+                                        color: rgba(0, 0, 0, 0.7);
+                                    }
+                                }
+
+                                input {
+                                    padding-left: 35px;
+                                    height: 50px;
+
+                                    &[type="submit"] {
+                                        padding-left: 0px;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

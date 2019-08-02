@@ -1,0 +1,333 @@
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/Roboto/Roboto-Regular.ttf"); }
+
+@font-face {
+  font-family: Roboto-light;
+  src: url("../fonts/Roboto/Roboto-Light.ttf"); }
+
+@font-face {
+  font-family: Roboto-bold;
+  src: url("../fonts/Roboto/Roboto-Bold.ttf"); }
+
+.modal.signin .modal-body form input.signin- {
+  padding: 12px 10px;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+  height: 50px;
+  -webkit-transition: padding .1s;
+  transition: padding .1s;
+  border: 1px solid #c5c6c9;
+  border-radius: 4px;
+  color: #404145; }
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 400px; } }
+
+.forgot {
+  overflow: hidden; }
+  .forgot .img {
+    height: 100vh;
+    background-image: url("../images/login/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+    background-color: #F7F7F7; }
+  .forgot .forgot-form {
+    background-color: #F7F7F7;
+    padding: 50px 20px;
+    font-family: Roboto-light, sans-serif;
+    color: #393333;
+    text-align: center;
+    height: 100vh;
+    overflow-y: scroll; }
+    .forgot .forgot-form .forgot-img {
+      margin-bottom: 20px; }
+    .forgot .forgot-form form {
+      padding: 30px;
+      text-align: left; }
+      .forgot .forgot-form form .form-group.forgot {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        width: 100%;
+        height: 80px;
+        position: relative;
+        border: 1px solid #e6e6e6;
+        border-radius: 10px;
+        margin-bottom: 10px; }
+        .forgot .forgot-form form .form-group.forgot label {
+          font-size: 18px;
+          color: #999999;
+          line-height: 1.2;
+          display: block;
+          position: absolute;
+          pointer-events: none;
+          width: 100%;
+          padding-left: 24px;
+          left: 0;
+          top: 30px;
+          -webkit-transition: all 0.4s;
+          -o-transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          transition: all 0.4s; }
+          .forgot .forgot-form form .form-group.forgot label.filled-entry {
+            top: 10px;
+            font-size: 12px; }
+        .forgot .forgot-form form .form-group.forgot input {
+          display: block;
+          width: 100%;
+          background: transparent;
+          font-size: 18px;
+          color: #555555;
+          line-height: 1.2;
+          padding: 0 26px; }
+          .forgot .forgot-form form .form-group.forgot input:focus + label {
+            top: 10px;
+            font-size: 12px; }
+        .forgot .forgot-form form .form-group.forgot input {
+          height: 100%;
+          -webkit-transition: all 0.4s;
+          -o-transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          transition: all 0.4s; }
+      .forgot .forgot-form form .form-group.form-check label {
+        font-size: 12px; }
+      .forgot .forgot-form form button.forgot {
+        padding: 0 20px;
+        width: 100%;
+        height: 60px;
+        border-radius: 10px;
+        font-size: 12px;
+        color: #fff;
+        line-height: 1.2;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s; }
+
+nav {
+  padding: 20px 0 !important;
+  z-index: 1000; }
+  nav a.navbar-brand {
+    color: white !important; }
+  nav ul.navbar-nav li.active a,
+  nav ul.navbar-nav li.active button {
+    color: lightgrey !important; }
+  nav ul.navbar-nav li:hover a,
+  nav ul.navbar-nav li:hover button {
+    color: lightgrey !important; }
+  nav ul.navbar-nav li a,
+  nav ul.navbar-nav li button {
+    color: white !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important; }
+    nav ul.navbar-nav li a.btn-primary,
+    nav ul.navbar-nav li button.btn-primary {
+      color: white !important; }
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/header/bg.jpg");
+  background-position: right top;
+  background-size: cover; }
+  header .content {
+    height: 100%;
+    margin-top: -50px; }
+    header .content .content-value {
+      display: flex;
+      align-items: center;
+      height: 600px;
+      width: 100%; }
+      header .content .content-value p {
+        color: lightgray; }
+      header .content .content-value h1 {
+        color: white;
+        font-size: 70px !important; }
+        header .content .content-value h1 span:nth-of-type(1) {
+          font-weight: 700; }
+        header .content .content-value h1 span:nth-of-type(2) {
+          font-weight: 400; }
+      header .content .content-value .tabs nav {
+        font-size: 20px;
+        padding-bottom: 0 !important; }
+        header .content .content-value .tabs nav .tab-content {
+          border: none !important; }
+        header .content .content-value .tabs nav .nav-tabs {
+          border: none !important; }
+          header .content .content-value .tabs nav .nav-tabs a.nav-item {
+            background: #007BFF;
+            border: none !important;
+            color: white;
+            margin-left: 5px;
+            padding: 15px 15px !important; }
+            header .content .content-value .tabs nav .nav-tabs a.nav-item:first-of-type {
+              margin-left: 0px; }
+            header .content .content-value .tabs nav .nav-tabs a.nav-item.active {
+              background: white;
+              color: rgba(0, 0, 0, 0.7); }
+      header .content .content-value .tabs .tab-content {
+        background: white;
+        margin-top: 1px;
+        padding: 1rem 1rem 0 1rem;
+        border-radius: 0 5px 5px 5px; }
+        header .content .content-value .tabs .tab-content form .form-group .form-field .icon i {
+          position: absolute;
+          top: 17px;
+          left: 25px;
+          color: rgba(0, 0, 0, 0.7); }
+        header .content .content-value .tabs .tab-content form .form-group .form-field input {
+          padding-left: 35px;
+          height: 50px; }
+          header .content .content-value .tabs .tab-content form .form-group .form-field input[type="submit"] {
+            padding-left: 0px; }
+
+section.services .info {
+  background: #F8F9FA;
+  padding: 100px 0 50px 0; }
+  section.services .info .items .item {
+    width: 80%; }
+    section.services .info .items .item img {
+      height: 50px;
+      widows: auto; }
+    section.services .info .items .item h2 {
+      color: rgba(0, 0, 0, 0.8);
+      font-size: 18px;
+      margin: 10px 0 20px 0; }
+    section.services .info .items .item p {
+      color: #999999;
+      font-size: 16px; }
+
+section.services .quote {
+  background-image: linear-gradient(to bottom, rgba(216, 182, 92, 0.8), rgba(216, 182, 92, 0.8)), url("../images/services/bg.jpg");
+  padding: 80px 0;
+  color: white;
+  background-size: cover;
+  background-position: center center; }
+  section.services .quote .btn {
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 13px 30px;
+    font-size: 15px;
+    margin-top: 40px;
+    color: #ffffff;
+    transition: .35s; }
+    section.services .quote .btn:hover {
+      background: white;
+      color: #007BFF; }
+
+section.internship {
+  padding: 100px 0; }
+  section.internship p {
+    color: #C2C3C3; }
+
+section.candidate {
+  padding: 100px 0;
+  background: #F8F9FA; }
+  section.candidate p {
+    color: #C2C3C3; }
+  section.candidate .candidate-list {
+    margin-top: 100px; }
+    section.candidate .candidate-list .candidate {
+      background: white;
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 10px 0; }
+      section.candidate .candidate-list .candidate[class^="col"] {
+        padding: 0 !important;
+        margin: 0; }
+      section.candidate .candidate-list .candidate .thumbnail {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 0 !important; }
+
+section.subscription {
+  padding: 100px 0;
+  background-color: #157EFB;
+  color: white; }
+  section.subscription form.subscribe-form {
+    margin-top: 50px; }
+    section.subscription form.subscribe-form input {
+      height: 50px;
+      border-radius: 2px 0 0 2px;
+      border: none; }
+      section.subscription form.subscribe-form input[type="submit"] {
+        width: 200px;
+        border-radius: 0px 2px 2px 0px; }
+
+footer {
+  background: #222831;
+  padding: 100px 0;
+  color: white; }
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px; }
+    footer ul.social li {
+      float: left; }
+      footer ul.social li a {
+        margin: 10px 5px;
+        color: white;
+        padding: 18px 20px;
+        border-radius: 100%;
+        background: #2D333B; }
+      footer ul.social li:first-of-type a {
+        margin-left: 0;
+        padding: 18px 23px; }
+    footer ul li {
+      margin: 10px 0; }
+      footer ul li a {
+        color: #63676E;
+        text-decoration: none !important; }
+        footer ul li a p {
+          margin-left: 20px !important;
+          display: inline-block; }
+  footer .copyright {
+    margin-top: 50px; }
+
+header.blog nav.crumbs {
+  margin-top: 400px; }
+  header.blog nav.crumbs ol.breadcrumb {
+    background: none !important; }
+    header.blog nav.crumbs ol.breadcrumb li {
+      color: white;
+      font-size: 50px;
+      font-weight: lighter; }
+      header.blog nav.crumbs ol.breadcrumb li.active::before {
+        color: white; }
+      header.blog nav.crumbs ol.breadcrumb li:hover a {
+        color: lightgrey !important; }
+      header.blog nav.crumbs ol.breadcrumb li a {
+        color: white;
+        font-size: 50px;
+        font-weight: 700;
+        text-decoration: none; }
+
+section.top-blogs {
+  padding-top: 50px; }
+  section.top-blogs h1.heading {
+    margin: 20px 0; }
+
+aside.latest-blogs {
+  padding-top: 50px; }
+  aside.latest-blogs h3.heading {
+    margin: 20px 0; }
+  aside.latest-blogs .mini-blog {
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 20px; }
+    aside.latest-blogs .mini-blog .thumbnail {
+      padding-right: 0px !important; }
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 300; }
+
+/*# sourceMappingURL=style.css.map*/

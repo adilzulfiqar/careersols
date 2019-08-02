@@ -1,0 +1,30 @@
+.modal {
+
+    &.signin {
+        .modal-body {
+
+            form {
+
+                input.signin- {
+                    padding: 12px 10px;
+                    font-size: 16px;
+                    line-height: 24px;
+                    width: 100%;
+                    height: 50px;
+                    -webkit-transition: padding .1s;
+                    transition: padding .1s;
+                    border: 1px solid #c5c6c9;
+                    border-radius: 4px;
+                    color: #404145;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 400px;
+    }
+}
