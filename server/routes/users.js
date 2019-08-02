@@ -47,7 +47,7 @@ router.post("/register", (req, res) => {
                                     from: "madilzulf@gmail.com",
                                     to: data.email,
                                     subject: "Hello There Please activate your acount",
-                                    text: `Hi, Thanks for your Registration. Please varify you email by clicking this link https://careersols.herokuapp.com/${data._id}`
+                                    text: `Hi, Thanks for your Registration. Please varify you email by clicking this link https://careersols.herokuapp.com/verification/${data._id}`
                                     // html: '<h1>Hi Smartherd</h1><p>Your Messsage</p>'
                                 };
 
