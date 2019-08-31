@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 
 const mongoose = require('mongoose');
 const users = require('./routes/users.js');
+const EmailVerification = require('./routes/EmailVerification')
 
 
 const app = express();
@@ -29,6 +30,7 @@ mongoose.connect(db, {
     .catch(e => console.log("error", e))
 
 app.use("/api/user", users);
+app.use("/api/user", EmailVerification);
 
 
 

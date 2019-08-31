@@ -36,19 +36,28 @@ router.post("/register", (req, res) => {
                             .then(data => {
                                 res.json(data);
                                 var transporter = nodemailer.createTransport({
-                                    service: "gmail",
+                                    // service: "gmail",
+                                    // auth: {
+                                    //     user: "madilzulf@gmail.com",
+                                    //     pass: "Mutation62"
+                                    // }
+
+                                    host: 'mail.careersols.com',
+                                    port: 465,
+                                    secure: true, // true for 465, false for other ports
                                     auth: {
-                                        user: "madilzulf@gmail.com",
-                                        pass: "Mutation62"
+                                        user: 'tech@careersols.com', // your domain email address
+                                        pass: '56HlX[duxcQo' // your password
                                     }
                                 });
 
                                 var mailOptions = {
-                                    from: "madilzulf@gmail.com",
+                                    from: "tech@careersols.com",
                                     to: data.email,
                                     subject: "Hello There Please activate your acount",
-                                    text: `Hi, Thanks for your Registration. Please varify you email by clicking this link https://careersols.herokuapp.com/verification/${data._id}`
+                                    text: `Hi, Thanks for your Registration. Please varify you email by clicking this link http://localhost:3000//verification/${data._id}`
                                     // html: '<h1>Hi Smartherd</h1><p>Your Messsage</p>'
+                                    // https://careersols.herokuapp.com
                                 };
 
                                 transporter.sendMail(mailOptions, function (
